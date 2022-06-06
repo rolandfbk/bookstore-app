@@ -2,7 +2,7 @@ const CHECK_STATUS   = 'bookstore/categories/CHECK_STATUS';
 
 const state = [];
 
-export const addBook = (status) => {
+export const checkStatus = (status) => {
   return { type: CHECK_STATUS, status };
 }
 

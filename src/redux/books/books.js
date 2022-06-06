@@ -11,10 +11,10 @@ export const removeBook = (book) => {
   return { type: REMOVE, book };
 }
 
-const bookReducer = (state, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
     case ADD: return [...state, action.book];
-    case REMOVE: return state.filter((item => item.id === action.book.id));
+    case REMOVE: return state.filter((item => item.id !== action.book.id));
     default: return state;
   }
 }
