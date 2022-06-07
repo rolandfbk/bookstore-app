@@ -8,6 +8,7 @@ const BookList = (props) => {
         <SingleBook
           key={book.id}
           book={book}
+          deleteBook={props.deleteBook}
         />
       ))}
     </ul>

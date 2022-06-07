@@ -1,9 +1,7 @@
 const CHECK_STATUS   = 'bookstore/categories/CHECK_STATUS';
 
-const state = [];
-
-export const checkStatus = (status) => {
-  return { type: CHECK_STATUS, status };
+export const checkStatus = () => {
+  return { type: CHECK_STATUS };
 }
 
 const categoriesReducer = (state = '', action) => {
