@@ -1,19 +1,17 @@
-import React, { useState } from "react"
+import React from "react";
 import BookList from "./BookList";
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { removeBook } from '../redux/books/books'
 
 const BookContainer = () => {
-  const allBooks = [
-    {
-      id: 1,
-      title: 'Let Love Lead',
-      Author: 'Roland',
-    },
-  ];
-
-  const [listing, setBooks] = useState(allBooks);
+  const listing = useSelector(state => state.bookReducer, shallowEqual);
+  const dispatch = useDispatch();
+  const deleteBook = id => {
+      dispatch(removeBook(id))
+  }
 
   return (
-    <BookList listing={listing} />
+    <BookList listing={listing} deleteBook={deleteBook} />
   );
 };
 
