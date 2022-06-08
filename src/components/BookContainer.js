@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BookList from "./BookList";
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-import { removeBook } from '../redux/books/books'
+import { removeBook, getBookFromApi } from '../redux/books/books'
 
 const BookContainer = () => {
-  const listing = useSelector(state => state.bookReducer, shallowEqual);
+  const listing = Object.entries(useSelector(state => state.bookReducer, shallowEqual));
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    getBookFromApi(dispatch);
+
+  }, []);
+
   const deleteBook = id => {
-      dispatch(removeBook(id))
+      removeBook(id).then((value) => {dispatch(value)})
   }
 
   return (

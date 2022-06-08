@@ -1,7 +1,9 @@
 import React from 'react';
 
 const SingleBook = (props) => {
-  const {id, title, author} = props.book;
+  const {author, title} = props.book[1][0];
+  const id = props.book[0];
+
   return(
     <li>
       <div>

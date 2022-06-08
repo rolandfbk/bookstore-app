@@ -6,7 +6,7 @@ const BookList = (props) => {
     <ul>
       {props.listing.map(book => (
         <SingleBook
-          key={book.id}
+          key={book[0]}
           book={book}
           deleteBook={props.deleteBook}
         />
