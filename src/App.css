@@ -72,6 +72,8 @@ a {
 }
 
 .book-li {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
   list-style-type: none;
   background-color: #fff;
   border: 1px solid #e8e8e8;
@@ -186,11 +188,6 @@ a {
 
 .book-panel {
   color: #e8e8e8;
-}
-
-.book-li {
-  display: grid;
-  grid-template-columns: 40% 30% 30%;
 }
 
 .book-details {
