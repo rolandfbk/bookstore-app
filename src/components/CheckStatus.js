@@ -12,7 +12,7 @@ const CheckStatus = () => {
   }
 
   return (
-    <div>
+    <div className="categories">
       <h1>{status}</h1>
       <button onClick={() => {showStatus()}}>Check Status</button>
     </div>

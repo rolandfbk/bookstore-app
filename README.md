@@ -3,7 +3,7 @@
 
 ## Bookstore
 
-> This is a project built with React. It is a single page application that displays a list of books, and allows users to add and delete books.
+> This is a project built with React. It is a single page application that displays a list of books, and allows users to add and delete books. Those books are populated from this [API](https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YtVxNHXODMWZgorpP7tK/books/) at the first run of the app. Whenener a user add a book, it get saved through the API on the remote server, and whenever a user remove a book, it get removed from the remote server through the API.
 
 ## Setup
 >- Git clone `https://github.com/rolandfbk/bookstore-app.git`
