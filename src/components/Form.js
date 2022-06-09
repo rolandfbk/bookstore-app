@@ -20,13 +20,21 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="add-book">
+      <div>
+        <hr></hr>
+        <h2>ADD NEW BOOK</h2>
+      </div>
+      <div>
+        <form className="book-form" onSubmit={handleSubmit}>
+        <input className="input-title" type="text" name="title" placeholder="Book title" value={inputs.title || ""} onChange={handleChange} />
+        <input className="input-author" type="text" name="author" placeholder="Book author" value={inputs.author || ""} onChange={handleChange} />
+        <button className="submit-btn" typeof='submit'>ADD BOOK</button>
+      </form>
+      </div>
 
-      <input type="text" name="title" placeholder="Title" value={inputs.title || ""} onChange={handleChange} />
-      <input type="text" name="author" placeholder="Author" value={inputs.author || ""} onChange={handleChange} />
-      <button typeof='submit'>Add book</button>
-      <br></br><br></br><br></br>
-    </form>
+    </div>
+
 
   )
 };

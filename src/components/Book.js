@@ -5,11 +5,13 @@ const SingleBook = (props) => {
   const id = props.book[0];
 
   return(
-    <li>
+    <li className="book-li">
       <div>
-        <p>Title: {title}</p>
-        <p>Author: {author}</p>
-        <button onClick={() => props.deleteBook(id)}>Delete</button>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <div className="book-button-actionList">
+          <button className="btn-delete-book" onClick={() => props.deleteBook(id)}>Delete</button>
+        </div>
       </div>
     </li>
   );
