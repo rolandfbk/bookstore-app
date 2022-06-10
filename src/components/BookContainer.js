@@ -11,7 +11,7 @@ const BookContainer = () => {
   useEffect(() => {
     getBookFromApi(dispatch);
 
-  }, []);
+  }, [dispatch]);
 
   const deleteBook = id => {
       removeBook(id).then((value) => {dispatch(value)})
